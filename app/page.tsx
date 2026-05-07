@@ -12,7 +12,7 @@ export default function Home() {
     className="
       px-6 py-2 text-3xl font-serif tracking-widest  rounded-2xl
       bg-white/30 backdrop-blur-md border border-white/40
-      transition-all duration-300
+      transition-all duration-300 
       hover:bg-white/40 hover:shadow-lg
       cursor-pointer
     "
