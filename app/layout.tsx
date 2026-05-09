@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Chandra Sekhar",
+  title: "Chandra Sekhar - Full Stack Developer",
   description: "full stack developer",  
 };
 

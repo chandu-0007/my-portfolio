@@ -14,7 +14,7 @@ export function About() {
                 <div className="flex flex-wrap  font-sans text-3xl gap-6 pt-2 text-gray-700">
 
                     <a
-                        href="mailto:yourmail@gmail.com"
+                        href="chandrasekharnaidukadari@gmail.com"
                         className="flex items-center gap-2 hover:text-black transition"
                     >
                         <Image
@@ -27,7 +27,7 @@ export function About() {
                     </a>
 
                     <a
-                        href="https://linkedin.com"
+                        href="https://www.linkedin.com/in/chandra-sekhar-145a81308"
                         target="_blank"
                         className="flex items-center gap-2 hover:text-black transition"
                     >
@@ -41,7 +41,7 @@ export function About() {
                     </a>
 
                     <a
-                        href="https://github.com"
+                        href="https://github.com/chandu-0007"
                         target="_blank"
                         className="flex items-center gap-2 hover:text-black transition"
                     >

@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Hero from "./components/Hero";
 import { About } from "./components/About";
+import Skills from "./components/Skills";
+import Projects from "./components/Projects";
 
 export default function Home() {
   return (
@@ -20,9 +22,9 @@ export default function Home() {
     CHANDRA SEKHAR
   </span>
 </div>
-
       <Hero />
       <About />
+      <Projects/>
     </div>
   );
 }
