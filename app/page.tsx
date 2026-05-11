@@ -5,6 +5,8 @@ import { About } from "./components/About";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import { motion } from "framer-motion";
+import ContactEducation from "./components/Education"
+import Footer from "./components/Footer";
 
 export default function Home() {
   return (
@@ -40,8 +42,10 @@ export default function Home() {
 
       <Hero />
       <About />
-      <Skills />
       <Projects />
+      <Skills />
+      <ContactEducation/>
+      <Footer/>
     </div>
   );
 }

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 const projects = [
   {
@@ -49,7 +50,7 @@ const projects = [
 export default function Projects() {
   return (
     <section className="bg-cyan-50 py-24 text-black overflow-hidden">
-      <div className="max-w-5xl mx-auto px-6 md:px-10">
+      <div className="max-w-5xl mx-auto px-6 md:px-10 perspective:1000px transform-style:preserve-3d">
 
         {/* HEADING */}
         <div className="max-w-2xl">
@@ -60,7 +61,7 @@ export default function Projects() {
         </div>
 
         {/* PROJECTS */}
-        <div className="mt-24 space-y-32">
+        <div className="mt-24 ">
 
           {projects.map((project, index) => (
             <div
@@ -71,40 +72,64 @@ export default function Projects() {
               items-start
               "
             >
-
               {/* LEFT IMAGE */}
-              <div>
-                <a
-                  href={project.live}
-                  target="_blank"
-                  className="group block overflow-hidden"
-                >
-                  <div
-                    className="
-                    relative
-                    w-full 
-                    flex  justify-center items-center 
-                    h-60
-                    md:h-85
-                    "
-                  >
-                    <Image
-                      src={project.image}
-                      alt={project.title}
-                      fill
-                      className="
-                      fill
-                      transition
-                      rounded-2xl 
-                      duration-500 
-                      group-hover:scale-[1.02]
-                      "
-                    />
-                  </div>
-                </a>
-              </div>
+<motion.div
+  whileHover={{ y: -6 }}
+  transition={{ duration: 0.3 }}
+  className="w-full max-w-[380px]"
+>
+  <a
+    href={project.live}
+    target="_blank"
+    className="
+      group
+      block
+      overflow-hidden
+      rounded-3xl
+      border border-cyan-200
+      bg-cyan-50
+      shadow-lg
+      hover:shadow-neutral-500
+      transition-all duration-500
+    "
+  >
+    {/* Image */}
+    <div
+      className="
+        relative
+        h-[220px]
+        overflow-hidden
+        rounded-2xl
+        m-3
+        bg-cyan-100
+      "
+    >
+      <Image
+        src={project.image}
+        alt={project.title}
+        fill
+        className="
+          object-cover
+          transition-transform duration-700
+          group-hover:scale-105
+        "
+      />
 
-              {/* RIGHT TIMELINE */}
+      {/* Soft Overlay */}
+      <div
+        className="
+          absolute inset-0
+          bg-gradient-to-t
+          from-cyan-900/20
+          to-transparent
+        "
+      />
+    </div>
+
+    {/* Content */}
+    
+  </a>
+</motion.div>
             {/* RIGHT TIMELINE */}
 <div className="relative pl-8">
 

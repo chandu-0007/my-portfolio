@@ -1,4 +1,5 @@
 import Image from "next/image";
+import {motion} from "framer-motion"
 export function About() {
     return (
         <section className="bg-cyan-50  py-24 text-black">
@@ -69,12 +70,16 @@ export function About() {
                     </a>
                 </div>
             </div>
-            <div className="pt-20 w-250 pl-20 text-5xl font-semibold font-san space-y-3 text-neutral-900">
+            <motion.div 
+             whileInView ={{ x : 40 }} 
+             animate  = { {x : 0 }} 
+             transition={{ duration : 0.89  }}
+            className="pt-20 w-250 pl-20 text-5xl font-semibold font-san space-y-3 text-neutral-900">
                 <p> I build end to end applications that </p>
                 <p>replace manual business workflows </p>
                  <p>with scalable digital processes.
                 </p>
-            </div>
+            </motion.div>
         </section>
     );
 }
